@@ -2,7 +2,7 @@ from zhipuai import ZhipuAI
 import streamlit as st
 import json
 
-st.title("AI绘画")
+st.title("小布丁绘画")
 client = ZhipuAI(api_key="b9555c1df61e441435592b83c044a4e2.qgHyKediqm4A078v")  # 请填写您自己的APIKey
 
 if "cache" not in st.session_state:

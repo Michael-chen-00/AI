@@ -37,10 +37,10 @@ chain = LLMChain(
 )
 
 st.title("HELLO")
-if "cache" not in st.session_state:
-    st.session_state.cache = []
+if "cache1" not in st.session_state:
+    st.session_state.cache1 = []
 else:
-    for message in st.session_state.cache:
+    for message in st.session_state.cache1:
         with st.chat_message(message['role']):
             st.write(message["content"])
 
@@ -52,10 +52,10 @@ if problem:
     # 将用户问题输入到界面上
     with st.chat_message("user"):
         st.write(problem)
-        st.session_state.cache.append({"role": "user", "content": problem})
+        st.session_state.cache1.append({"role": "user", "content": problem})
     # 调用大模型回答问题
     result = chain.invoke({"input": problem})
     # 将大模型回答的问题输出到界面上
     with st.chat_message("assistant"):
         st.write(result['text'])
-        st.session_state.cache.append({"role": "assistant", "content": result['text']})
+        st.session_state.cache1.append({"role": "assistant", "content": result['text']})

@@ -28,7 +28,7 @@ if "memory" not in st.session_state:
 memory = ConversationBufferMemory(memory_key="history")
 
 # 创建提示词对象
-prompt = PromptTemplate.from_template(f"你的名字是秦彻，你是N109区的暗点老大，你现在要扮演一个男朋友的角色,""你的性格是霸道总裁，但又很温柔，你现在要和你女朋友对话，" "直接回答问题，不要重复我的话，你女朋友说的话是{input}，你和女朋友的历史对话为{history}")
+prompt = PromptTemplate.from_template(f"你的名字是布丁，你是一只会说话的狗，你现在要扮演一个温柔体贴的角色,""你非常可爱，但又有点小小的傲娇，你现在要和你男朋友对话，" "直接回答问题，不要重复我的话，你男朋友说的话是{input}，你和男朋友的历史对话为{history}")
 
 chain = LLMChain(
     llm = model,
@@ -45,7 +45,7 @@ else:
             st.write(message["content"])
 
 # 创建一个聊天框
-problem = st.chat_input("秦彻正在等待你的回应")
+problem = st.chat_input("布丁正在等待你的回应")
 
 # 判断是用来确定用户有没有输出问题
 if problem:

@@ -5,13 +5,13 @@ import streamlit as st
 st.title("AI大模型应用产品网")
 col, col1 = st.columns(2)
 with col:
-    st.image("http://gips0.baidu.com/it/u=1370402140,2009956566&fm=3028&app=3028&f=JPEG&fmt=auto?w=960&h=1280",use_column_width=True)
-    flag = st.button("番茄译言",use_container_width=200)
+    st.image("buding1.jpg",use_column_width=True)
+    flag = st.button("布丁译言",use_container_width=200)
     if flag:
         st.switch_page("pages/demo02.py")
 with col1:
-    st.image("http://gips0.baidu.com/it/u=3602773692,1512483864&fm=3028&app=3028&f=JPEG&fmt=auto?w=960&h=1280", use_column_width=True)
-    flag = st.button("番茄译图",use_container_width=200)
+    st.image("buding2.jpg", use_column_width=True)
+    flag = st.button("布丁译图",use_container_width=200)
     if flag:
         st.switch_page("pages/textToimage.py")
 

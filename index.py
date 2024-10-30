@@ -11,7 +11,7 @@ with col:
         st.switch_page("pages/demo02.py")
 with col1:
     st.image("buding2.jpg", use_column_width=True)
-    flag = st.button("布丁译图",use_container_width=200)
+    flag = st.button("布丁绘图",use_container_width=200)
     if flag:
         st.switch_page("pages/textToimage.py")
 

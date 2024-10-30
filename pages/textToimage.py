@@ -19,7 +19,6 @@ description = st.chat_input("请输入图片描述")
 if description:
     with st.chat_message("user"):
         st.write(description)
-        st.write("正在生成图片")
     st.session_state.cache.append({"role": "user", "content": description})
     try:
         response = client.images.generations(
